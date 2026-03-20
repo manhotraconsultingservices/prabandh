@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prabandh ERP — One Platform. Complete Control. Infinite Growth.</title>
+<meta name="description" content="Prabandh is India's most comprehensive cloud ERP — GST-native, multi-godown, role-based, built for SMEs. Manage Sales, Purchase, Inventory, HR, Accounting & Compliance from one powerful platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f172a;--navy-800:#1e293b;--navy-700:#334155;
+  --indigo:#4f46e5;--indigo-light:#818cf8;
+  --blue:#2563eb;--blue-light:#dbeafe;
+  --green:#16a34a;--green-bg:#f0fdf4;
+  --red:#dc2626;--red-bg:#fef2f2;
+  --gold:#d97706;--gold-bg:#fffbeb;
+  --gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;
+  --gray-400:#94a3b8;--gray-600:#475569;--gray-800:#1e293b;
+  --white:#fff;
+  --r:12px;--r-lg:20px;
+  --sh:0 4px 24px rgba(0,0,0,.10);
+  --sh-lg:0 20px 60px rgba(0,0,0,.18);
+  --tr:all .3s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--navy-800);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;border-radius:var(--r)}
+
+/* ── UTILITY ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.section-alt{background:var(--gray-50)}
+.tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:16px}
+.tag-gold{background:var(--gold-bg);color:var(--gold)}
+.tag-green{background:var(--green-bg);color:var(--green)}
+h2.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.75rem);font-weight:800;line-height:1.2;color:var(--navy);margin-bottom:16px}
+p.section-sub{font-size:1.1rem;color:var(--gray-600);max-width:640px;margin:0 auto 56px}
+.text-center{text-align:center}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;transition:var(--tr);border:2px solid transparent}
+.btn-primary{background:var(--indigo);color:#fff;border-color:var(--indigo)}
+.btn-primary:hover{background:#3730a3;border-color:#3730a3;transform:translateY(-2px);box-shadow:0 8px 25px rgba(79,70,229,.4)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-outline{background:transparent;color:var(--indigo);border-color:var(--indigo)}
+.btn-outline:hover{background:var(--indigo);color:#fff}
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.logo-badge{width:38px;height:38px;background:linear-gradient(135deg,var(--indigo),#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.1rem;font-family:'Playfair Display',serif}
+.logo-text{color:#fff;font-size:1.25rem;font-weight:700;letter-spacing:-.02em}
+.logo-sub{color:var(--gray-400);font-size:.7rem;margin-left:2px}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.75);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-ctas{display:flex;gap:12px;align-items:center}
+.nav-ctas .btn{padding:10px 20px;font-size:.9rem}
+.nav-demo{background:var(--indigo);color:#fff;border-radius:8px;padding:10px 20px;font-weight:600;font-size:.9rem;transition:var(--tr)}
+.nav-demo:hover{background:#3730a3}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0 60px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(79,70,229,.15) 0%,transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-tag{background:rgba(79,70,229,.2);color:var(--indigo-light);border:1px solid rgba(79,70,229,.3);display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:24px}
+.hero-tag-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:12px}
+.hero h1 span{background:linear-gradient(90deg,#818cf8,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-hindi{font-size:1rem;color:rgba(255,255,255,.5);font-weight:500;margin-bottom:20px;letter-spacing:.02em}
+.hero-desc{font-size:1.1rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:36px;max-width:520px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-social-proof{display:flex;gap:32px}
+.proof-item{display:flex;flex-direction:column}
+.proof-num{font-size:1.6rem;font-weight:800;color:#fff}
+.proof-label{font-size:.75rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em}
+
+/* ── DASHBOARD MOCKUP ── */
+.dashboard-mockup{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;box-shadow:0 40px 80px rgba(0,0,0,.4);position:relative}
+.mock-topbar{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.mock-dot{width:10px;height:10px;border-radius:50%}
+.mock-title{color:rgba(255,255,255,.6);font-size:.8rem;margin-left:8px}
+.mock-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mock-kpi{background:rgba(255,255,255,.06);border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,.08)}
+.mock-kpi-label{font-size:.65rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.mock-kpi-val{font-size:1.1rem;font-weight:700;color:#fff}
+.mock-kpi-badge{font-size:.65rem;padding:2px 6px;border-radius:4px;display:inline-block;margin-top:4px}
+.badge-green{background:rgba(74,222,128,.15);color:#4ade80}
+.badge-red{background:rgba(248,113,113,.15);color:#f87171}
+.badge-blue{background:rgba(96,165,250,.15);color:#60a5fa}
+.mock-chart{background:rgba(255,255,255,.04);border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,.08);margin-bottom:12px;height:80px;display:flex;align-items:flex-end;gap:6px}
+.mock-bar{flex:1;border-radius:4px 4px 0 0;opacity:.8;transition:height .5s ease}
+.mock-table{background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.mock-row{display:flex;justify-content:space-between;padding:8px 12px;font-size:.7rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.mock-row:last-child{border:none}
+.mock-row-label{color:rgba(255,255,255,.6)}
+.mock-row-val{color:#fff;font-weight:600}
+.mock-status{padding:2px 8px;border-radius:4px;font-size:.6rem;font-weight:600}
+
+/* ── TICKER ── */
+.ticker{background:var(--indigo);padding:12px 0;overflow:hidden}
+.ticker-inner{display:flex;gap:0;animation:ticker 25s linear infinite;white-space:nowrap}
+.ticker-item{display:inline-flex;align-items:center;gap:8px;padding:0 40px;font-size:.85rem;color:rgba(255,255,255,.9);font-weight:500}
+.ticker-dot{width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── TRUST BAR ── */
+.trust-bar{padding:64px 0;background:#fff;border-bottom:1px solid var(--gray-200)}
+.trust-stats{display:grid;grid-template-columns:repeat(5,1fr);text-align:center;gap:32px}
+.stat-num{font-size:2.5rem;font-weight:800;color:var(--indigo);line-height:1;margin-bottom:6px}
+.stat-label{font-size:.85rem;color:var(--gray-600);font-weight:500}
+.stat-divider{width:1px;background:var(--gray-200)}
+
+/* ── USE CASES ── */
+.usecase-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px}
+.uc-tab{padding:10px 20px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:2px solid var(--gray-200);background:#fff;color:var(--gray-600);transition:var(--tr)}
+.uc-tab.active,.uc-tab:hover{border-color:var(--indigo);color:var(--indigo);background:var(--blue-light)}
+.usecase-panel{display:none}
+.usecase-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.uc-story{background:var(--red-bg);border:1px solid #fecaca;border-radius:var(--r-lg);padding:32px}
+.uc-story-tag{display:inline-flex;align-items:center;gap:6px;background:#fef2f2;color:var(--red);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 12px;border-radius:100px;border:1px solid #fecaca;margin-bottom:16px}
+.uc-story h3{font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.3}
+.uc-scene{font-size:.9rem;color:var(--gray-600);line-height:1.7;margin-bottom:20px;font-style:italic;background:rgba(255,255,255,.6);padding:16px;border-radius:8px;border-left:3px solid var(--red)}
+.pain-list{list-style:none}
+.pain-list li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:.9rem;color:var(--gray-800)}
+.pain-list li:last-child{border:none}
+.pain-icon{color:var(--red);font-size:1rem;flex-shrink:0;margin-top:1px}
+.uc-solution{display:flex;flex-direction:column;gap:20px}
+.uc-sol-header{background:var(--green-bg);border:1px solid #bbf7d0;border-radius:var(--r-lg);padding:24px}
+.uc-sol-header h4{font-size:1rem;font-weight:700;color:var(--green);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.sol-list{list-style:none}
+.sol-list li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:.9rem;color:var(--gray-800)}
+.sol-list li:last-child{border:none}
+.sol-icon{color:var(--green);font-size:1rem;flex-shrink:0}
+.uc-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r);padding:16px;text-align:center;box-shadow:var(--sh)}
+.metric-num{font-size:1.5rem;font-weight:800;color:var(--indigo);line-height:1;margin-bottom:4px}
+.metric-label{font-size:.75rem;color:var(--gray-600)}
+.uc-quote{background:var(--navy-800);border-radius:var(--r);padding:20px 24px;color:rgba(255,255,255,.85);font-size:.9rem;font-style:italic;line-height:1.6;border-left:3px solid var(--indigo-light)}
+.uc-quote-attr{color:var(--gray-400);font-size:.78rem;margin-top:8px;font-style:normal}
+
+/* ── MODULES ── */
+.modules-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.module-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:24px;transition:var(--tr);cursor:default}
+.module-card:hover{border-color:var(--indigo);box-shadow:0 8px 32px rgba(79,70,229,.12);transform:translateY(-4px)}
+.module-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+.module-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.module-card p{font-size:.85rem;color:var(--gray-600);line-height:1.6}
+.module-card .module-roles{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}
+.module-role-tag{font-size:.65rem;padding:2px 8px;border-radius:100px;background:var(--gray-100);color:var(--gray-600);font-weight:500}
+
+/* ── WHY PRABANDH ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.why-list{display:flex;flex-direction:column;gap:20px}
+.why-item{display:flex;gap:16px;align-items:flex-start;padding:20px;background:#fff;border-radius:var(--r);border:1px solid var(--gray-200);transition:var(--tr)}
+.why-item:hover{border-color:var(--indigo);box-shadow:var(--sh)}
+.why-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.why-item h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.why-item p{font-size:.85rem;color:var(--gray-600);line-height:1.5}
+.why-visual{background:linear-gradient(135deg,var(--navy) 0%,#1e1b4b 100%);border-radius:var(--r-lg);padding:36px;position:relative;overflow:hidden}
+.why-visual::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(79,70,229,.2);border-radius:50%}
+.comp-table{width:100%;border-collapse:collapse}
+.comp-table th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.5);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+.comp-table td{padding:12px;font-size:.85rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.comp-table tr:last-child td{border:none}
+.comp-feat{color:rgba(255,255,255,.85);font-weight:500}
+.comp-check{color:#4ade80;font-weight:700;text-align:center}
+.comp-cross{color:#f87171;text-align:center}
+.comp-partial{color:var(--gold);text-align:center}
+
+/* ── SCREENSHOTS ── */
+.screenshots-intro{text-align:center;margin-bottom:48px}
+.ss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ss-card{cursor:pointer;transition:var(--tr);position:relative}
+.ss-card:hover{transform:translateY(-6px)}
+.ss-card:hover .ss-overlay{opacity:1}
+.ss-frame{background:var(--navy-800);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);border:1px solid rgba(255,255,255,.1)}
+.ss-topbar{background:var(--navy);padding:10px 16px;display:flex;align-items:center;gap:8px}
+.ss-dot{width:10px;height:10px;border-radius:50%}
+.ss-url{flex:1;background:rgba(255,255,255,.07);border-radius:4px;padding:3px 10px;font-size:.7rem;color:rgba(255,255,255,.4)}
+.ss-body{position:relative;overflow:hidden}
+.ss-body img{width:100%;height:200px;object-fit:cover;object-position:top;display:block}
+.ss-placeholder{width:100%;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(135deg,rgba(79,70,229,.1),rgba(124,58,237,.1));border-top:1px solid rgba(255,255,255,.06)}
+.ss-placeholder-icon{font-size:2.5rem}
+.ss-placeholder-text{font-size:.8rem;color:rgba(255,255,255,.4);text-align:center;line-height:1.4}
+.ss-placeholder-hint{font-size:.65rem;color:rgba(255,255,255,.2);background:rgba(255,255,255,.05);padding:4px 10px;border-radius:4px}
+.ss-overlay{position:absolute;inset:0;background:rgba(79,70,229,.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;font-size:1.5rem;color:#fff}
+.ss-label{padding:14px 16px;background:var(--navy-800)}
+.ss-label h4{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:2px}
+.ss-label p{font-size:.75rem;color:rgba(255,255,255,.4)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;padding:40px}
+.lightbox.open{display:flex}
+.lightbox-inner{max-width:1000px;width:100%;position:relative}
+.lightbox-close{position:absolute;top:-44px;right:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1;z-index:1}
+.lightbox-img{width:100%;border-radius:var(--r-lg);box-shadow:var(--sh-lg)}
+.lightbox-caption{color:rgba(255,255,255,.7);text-align:center;margin-top:16px;font-size:.9rem}
+
+/* ── PRICING ── */
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:48px}
+.price-card{background:#fff;border:2px solid var(--gray-200);border-radius:var(--r-lg);padding:32px;position:relative;transition:var(--tr)}
+.price-card:hover{border-color:var(--indigo);box-shadow:0 16px 48px rgba(79,70,229,.15);transform:translateY(-4px)}
+.price-card.featured{border-color:var(--indigo);box-shadow:0 16px 48px rgba(79,70,229,.2)}
+.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--indigo);color:#fff;font-size:.75rem;font-weight:700;padding:4px 16px;border-radius:100px;white-space:nowrap}
+.price-plan{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-400);margin-bottom:8px}
+.price-amount{font-size:2.5rem;font-weight:800;color:var(--navy);line-height:1;margin-bottom:4px}
+.price-amount span{font-size:1rem;font-weight:500;color:var(--gray-400)}
+.price-users{font-size:.85rem;color:var(--gray-600);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--gray-200)}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.price-features li{display:flex;gap:8px;align-items:flex-start;font-size:.85rem;color:var(--gray-600)}
+.price-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.price-cta{width:100%}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sh)}
+.testi-stars{color:var(--gold);font-size:1rem;margin-bottom:16px}
+.testi-text{font-size:.9rem;color:var(--gray-700);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:#fff;flex-shrink:0}
+.testi-name{font-weight:700;font-size:.9rem;color:var(--navy)}
+.testi-role{font-size:.78rem;color:var(--gray-400)}
+
+/* ── FAQ ── */
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);font-size:.95rem;gap:16px}
+.faq-icon{color:var(--indigo);font-size:1.2rem;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 24px 20px;font-size:.9rem;color:var(--gray-600);line-height:1.7}
+.faq-item.open .faq-a{display:block}
+
+/* ── CTA ── */
+.cta-section{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%);padding:96px 0;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(79,70,229,.2),transparent);pointer-events:none}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:800;margin-bottom:16px}
+.cta-section p{color:rgba(255,255,255,.7);font-size:1.1rem;margin-bottom:48px}
+.demo-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:40px;max-width:680px;margin:0 auto;position:relative;z-index:1}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:.8rem;color:rgba(255,255,255,.6);font-weight:500}
+.form-group input,.form-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:12px 16px;color:#fff;font-size:.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s}
+.form-group input::placeholder{color:rgba(255,255,255,.3)}
+.form-group input:focus,.form-group select:focus{border-color:var(--indigo-light)}
+.form-group select option{background:var(--navy-800);color:#fff}
+.form-submit{width:100%;margin-top:8px;padding:16px;font-size:1rem}
+
+/* ── FORM STATES ── */
+.form-btn-loading{opacity:.7;pointer-events:none;cursor:not-allowed}
+.form-btn-loading::after{content:'';display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;margin-left:10px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-success{display:none;text-align:center;padding:48px 24px}
+.form-success.show{display:block}
+.success-icon{width:72px;height:72px;background:linear-gradient(135deg,#16a34a,#15803d);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 20px;animation:popIn .5s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes popIn{0%{transform:scale(0)}100%{transform:scale(1)}}
+.form-success h3{color:#fff;font-size:1.5rem;font-weight:700;margin-bottom:10px}
+.form-success p{color:rgba(255,255,255,.65);font-size:.95rem;line-height:1.6}
+.form-error-msg{background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);color:#fca5a5;border-radius:8px;padding:12px 16px;font-size:.85rem;margin-top:12px;display:none}
+.form-error-msg.show{display:block}
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-text{font-size:1.4rem;margin-bottom:8px;display:block}
+.footer-brand p{font-size:.85rem;line-height:1.6;margin-bottom:20px;color:rgba(255,255,255,.5)}
+.footer-badges{display:flex;gap:10px;flex-wrap:wrap}
+.footer-badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:6px 12px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6)}
+.footer-col h4{color:#fff;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.4)}
+.footer-social{display:flex;gap:12px}
+.social-link{width:36px;height:36px;background:rgba(255,255,255,.07);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .2s}
+.social-link:hover{background:var(--indigo)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .modules-grid{grid-template-columns:repeat(3,1fr)}
+  .pricing-grid{grid-template-columns:repeat(2,1fr)}
+  .ss-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-stats{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .section{padding:64px 0}
+  .nav-links,.nav-ctas{display:none}
+  .hamburger{display:flex}
+  .hero-grid,.usecase-panel.active,.why-grid,.grid-2{grid-template-columns:1fr}
+  .hero-social-proof{gap:20px}
+  .dashboard-mockup{display:none}
+  .modules-grid,.ss-grid,.testi-grid,.pricing-grid{grid-template-columns:1fr 1fr}
+  .trust-stats{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .uc-metrics{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .modules-grid,.ss-grid,.testi-grid,.pricing-grid,.uc-metrics{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hero-social-proof{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <div class="container nav-inner">
+   <!-- <a href="#" class="nav-logo"> 
+      <div class="logo-badge">प</div>-->
+      <div>
+        <div class="logo-text">Prabandh</div>
+        <div class="logo-sub">by Manhotra Consulting</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#usecases">Use Cases</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
+      <!--<li><a href="#pricing">Pricing</a></li> -->
+      <li><a href="#demo">Contact</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <a href="https://prabandh.atithi-setu.com/login" target="_blank" style="color:rgba(255,255,255,.7);font-size:.9rem;font-weight:500">Log In</a>
+      <a href="#demo" class="nav-demo">Book a Demo →</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">
+          <div class="hero-tag-dot"></div>
+          India's GST-Native Cloud ERP — Now Live
+        </div>
+        <h1>Run Every Corner of Your Business from <span>One Powerful Command Center</span></h1>
+        <p class="hero-hindi">सब कुछ एक मंच। हर काम आसान।</p>
+        <p class="hero-desc">Prabandh unifies Sales, Purchase, Inventory, HR, Accounting, Manufacturing & GST Compliance — eliminating spreadsheets, manual errors, and operational blind spots for good.</p>
+        <div class="hero-btns">
+          <a href="#demo" class="btn btn-primary">🚀 Book a Free Demo</a>
+          <a href="https://prabandh.atithi-setu.com/login" target="_blank" class="btn btn-ghost">Try Live →</a>
+        </div>
+        <div class="hero-social-proof">
+          <div class="proof-item"><div class="proof-num">12</div><div class="proof-label">Core Modules</div></div>
+          <div class="proof-item"><div class="proof-num">10</div><div class="proof-label">User Roles</div></div>
+          <div class="proof-item"><div class="proof-num">100%</div><div class="proof-label">GST Accurate</div></div>
+          <div class="proof-item"><div class="proof-num">₹0</div><div class="proof-label">Setup Cost</div></div>
+        </div>
+      </div>
+      <div class="dashboard-mockup">
+        <div class="mock-topbar">
+          <div class="mock-dot" style="background:#ff5f57"></div>
+          <div class="mock-dot" style="background:#ffbd2e"></div>
+          <div class="mock-dot" style="background:#28c840"></div>
+          <div class="mock-title">Prabandh Dashboard — Manhotra Pvt Ltd</div>
+        </div>
+        <div class="mock-kpis">
+          <div class="mock-kpi">
+            <div class="mock-kpi-label">Today's Sales</div>
+            <div class="mock-kpi-val">₹4,82,500</div>
+            <div class="mock-kpi-badge badge-green">↑ 18.4%</div>
+          </div>
+          <div class="mock-kpi">
+            <div class="mock-kpi-label">Receivables</div>
+            <div class="mock-kpi-val">₹28,40,000</div>
+            <div class="mock-kpi-badge badge-red">12 Overdue</div>
+          </div>
+          <div class="mock-kpi">
+            <div class="mock-kpi-label">Stock Alerts</div>
+            <div class="mock-kpi-val">7 Items</div>
+            <div class="mock-kpi-badge badge-blue">Reorder Now</div>
+          </div>
+        </div>
+        <div class="mock-chart" id="mockChart"></div>
+        <div class="mock-table">
+          <div class="mock-row"><span class="mock-row-label">INV-2026-0481 · Sharma Traders</span><span class="mock-status" style="background:rgba(248,113,113,.15);color:#f87171">UNPAID</span></div>
+          <div class="mock-row"><span class="mock-row-label">INV-2026-0480 · Gupta & Sons</span><span class="mock-status" style="background:rgba(251,191,36,.15);color:#fbbf24">PARTIAL</span></div>
+          <div class="mock-row"><span class="mock-row-label">INV-2026-0479 · Kapoor Exports</span><span class="mock-status" style="background:rgba(74,222,128,.15);color:#4ade80">PAID</span></div>
+          <div class="mock-row"><span class="mock-row-label">PO-2026-0143 · Tata Components</span><span class="mock-status badge-blue">PENDING</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">✦ GST GSTR-1 &amp; GSTR-3B Auto-Generation</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Multi-Godown Inventory Management</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Role-Based Access — 10 Roles</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ WhatsApp &amp; SMS Invoice Delivery</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Tally XML Export Compatible</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ PDF Invoices &amp; Delivery Challans</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Manufacturing &amp; Job Work Tracking</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ HR, Payroll &amp; Attendance Management</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ GST GSTR-1 &amp; GSTR-3B Auto-Generation</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Multi-Godown Inventory Management</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Role-Based Access — 10 Roles</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ WhatsApp &amp; SMS Invoice Delivery</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Tally XML Export Compatible</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ PDF Invoices &amp; Delivery Challans</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ Manufacturing &amp; Job Work Tracking</span><span class="ticker-dot"></span>
+    <span class="ticker-item">✦ HR, Payroll &amp; Attendance Management</span><span class="ticker-dot"></span>
+  </div>
+</div>
+
+<!-- ══════════════ TRUST BAR ══════════════ -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-stats">
+      <div class="text-center fade-up">
+        <div class="stat-num" data-target="500">0</div>
+        <div class="stat-label">Businesses Managed</div>
+      </div>
+      <div class="text-center fade-up">
+        <div class="stat-num" data-target="12">0</div>
+        <div class="stat-label">Integrated Modules</div>
+      </div>
+      <div class="text-center fade-up">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">GST Calculation Accuracy</div>
+      </div>
+      <div class="text-center fade-up">
+        <div class="stat-num" data-target="10">0</div>
+        <div class="stat-label">Role Profiles</div>
+      </div>
+      <div class="text-center fade-up">
+        <div class="stat-num">99.9%</div>
+        <div class="stat-label">Platform Uptime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ USE CASES ══════════════ -->
+<section class="section section-alt" id="usecases">
+  <div class="container">
+    <div class="text-center">
+      <div class="tag tag-gold">Real Business Problems. Real Solutions.</div>
+      <h2 class="section-title">8 Challenges Destroying Your Profits — <br>And How Prabandh Eliminates Them</h2>
+      <p class="section-sub">Every scenario below is grounded in real incidents from Indian SMEs across trading, manufacturing, and distribution. If your business recognises even two of these, the ROI case for Prabandh is immediate.</p>
+    </div>
+    <div class="usecase-tabs">
+      <button class="uc-tab active" onclick="showUC(0)">💸 Revenue Leak</button>
+      <button class="uc-tab" onclick="showUC(1)">📦 Inventory Blindness</button>
+      <button class="uc-tab" onclick="showUC(2)">🧾 GST Penalty</button>
+      <button class="uc-tab" onclick="showUC(3)">🚚 Delivery Disputes</button>
+      <button class="uc-tab" onclick="showUC(4)">🤝 Vendor Crisis</button>
+      <button class="uc-tab" onclick="showUC(5)">💰 Cash Flow Gap</button>
+      <button class="uc-tab" onclick="showUC(6)">👤 Payroll Fraud</button>
+      <button class="uc-tab" onclick="showUC(7)">📊 Decision Desert</button>
+    </div>
+
+    <!-- UC 1 -->
+    <div class="usecase-panel active" id="uc-0">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Sales &amp; Receivables</div>
+        <h3>The Silent Revenue Leak — Partial payments ageing into bad debt</h3>
+        <div class="uc-scene">"Sanjay Mehta opened three spreadsheets, a WhatsApp group, and his accountant's notebook before admitting: 'I'm not sure how much is unpaid.' Three invoices worth ₹8.4 lakhs — sent two months ago — had never been followed up. The money was always there. The system to collect it was not."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> No single view of unpaid, partially paid, or overdue invoices</li>
+          <li><span class="pain-icon">✗</span> Partial payments recorded but outstanding balance never tracked</li>
+          <li><span class="pain-icon">✗</span> Cash flow decisions made on reported revenue, not actual collections</li>
+          <li><span class="pain-icon">✗</span> No automated ageing alerts — collections team flies blind</li>
+          <li><span class="pain-icon">✗</span> Year-end: ₹30–50L in doubtful receivables that could have been collected</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Real-time Partial Payment Engine — every rupee updates invoice balance instantly</li>
+            <li><span class="sol-icon">✓</span> UNPAID / PARTIAL / PAID colour-coded badges on every invoice list</li>
+            <li><span class="sol-icon">✓</span> Receivables Ageing Report — 0–30, 31–60, 61–90, 90+ day buckets</li>
+            <li><span class="sol-icon">✓</span> One-click Party Statement PDF to resolve any "we already paid" dispute</li>
+            <li><span class="sol-icon">✓</span> Invoice Detail Drawer — full payment history on a single screen</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">40%</div><div class="metric-label">Reduction in overdue receivables within 90 days</div></div>
+          <div class="metric-card"><div class="metric-num">3×</div><div class="metric-label">Faster cash collection cycle</div></div>
+          <div class="metric-card"><div class="metric-num">₹0</div><div class="metric-label">Disputes where ledger can't resolve the argument</div></div>
+        </div>
+        <div class="uc-quote">"We recovered ₹12 lakhs in the first month just because we could finally see what was unpaid. The money was always there — we just couldn't see it." <div class="uc-quote-attr">— Head of Accounts, Mid-size Trading Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 2 -->
+    <div class="usecase-panel" id="uc-1">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Inventory Management</div>
+        <h3>The Inventory Blindness Trap — Stock-outs at one godown, surplus at another</h3>
+        <div class="uc-scene">"Priya runs a textile wholesale business across three godowns — Mumbai, Pune, Nagpur. A retailer's urgent order was cancelled because nobody knew Pune had 800 metres available. That same week, they purchased ₹18 lakhs of fabric they already owned — just in a different city."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> No real-time cross-godown stock visibility — decisions made on phone calls</li>
+          <li><span class="pain-icon">✗</span> Phantom stock: goods shown as available but actually dispatched or damaged</li>
+          <li><span class="pain-icon">✗</span> Purchase team buys items already in surplus at another location</li>
+          <li><span class="pain-icon">✗</span> Reorder alerts fire per-location without considering total network stock</li>
+          <li><span class="pain-icon">✗</span> Year-end physical count shows massive discrepancies vs. book stock</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Live stock ledger per item per godown — all locations on one screen</li>
+            <li><span class="sol-icon">✓</span> Consolidated reorder alerts consider total network stock, not just one location</li>
+            <li><span class="sol-icon">✓</span> Every stock movement logged with timestamp and authorisation trail</li>
+            <li><span class="sol-icon">✓</span> HSN and batch tracking for quality disputes and traceability</li>
+            <li><span class="sol-icon">✓</span> Item master locks selling price, GST rate, unit — zero billing discrepancy</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">25%</div><div class="metric-label">Reduction in unnecessary purchase orders</div></div>
+          <div class="metric-card"><div class="metric-num">60%</div><div class="metric-label">Faster customer order fulfilment</div></div>
+          <div class="metric-card"><div class="metric-num">99%</div><div class="metric-label">Inventory accuracy at year-end stock count</div></div>
+        </div>
+        <div class="uc-quote">"Before the ERP, we bought ₹18 lakhs of raw material we already owned — just in a different city. That mistake can never happen again." <div class="uc-quote-attr">— Procurement Head, Textile Wholesale Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 3 -->
+    <div class="usecase-panel" id="uc-2">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · GST Compliance</div>
+        <h3>The GST Penalty Catastrophe — One wrong HSN code. ₹19.3L demand notice.</h3>
+        <div class="uc-scene">"Rajan Exports received a GST demand notice for ₹19.3 lakhs. The reason: 5% GST applied on items that should have been taxed at 12%. The billing clerk manually typed HSN codes. Over 14 months and 847 invoices, a single digit error silently accumulated into a liability that threatened their GST registration."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Billing staff manually type HSN codes — every invoice risks an error</li>
+          <li><span class="pain-icon">✗</span> GSTR-1 mismatches books because invoices come from different tools</li>
+          <li><span class="pain-icon">✗</span> B2B vs B2C GST treatment applied inconsistently across team</li>
+          <li><span class="pain-icon">✗</span> Input tax credit on purchases not tracked — thousands in ITC unclaimed</li>
+          <li><span class="pain-icon">✗</span> Late filing penalties compound monthly without an automatic summary</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> HSN codes and GST rates locked in item master — never typed on invoices again</li>
+            <li><span class="sol-icon">✓</span> CGST/SGST vs IGST auto-calculated from party GSTIN and supply type</li>
+            <li><span class="sol-icon">✓</span> GSTR-1 and GSTR-3B summaries at the click of a button</li>
+            <li><span class="sol-icon">✓</span> Purchase ITC tracked automatically — maximise every rupee of credit</li>
+            <li><span class="sol-icon">✓</span> B2B/B2C/Export classifications locked — zero misclassification risk</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">100%</div><div class="metric-label">GST calculation accuracy — zero manual tax entry</div></div>
+          <div class="metric-card"><div class="metric-num">₹4.7L</div><div class="metric-label">Average penalty avoided per compliance cycle</div></div>
+          <div class="metric-card"><div class="metric-num">2 hrs</div><div class="metric-label">GSTR-1 preparation time (down from 3 days)</div></div>
+        </div>
+        <div class="uc-quote">"The demand notice was a ₹19 lakh wake-up call. We could have bought the ERP twenty times over with what we paid in penalties, interest, and CA fees." <div class="uc-quote-attr">— Finance Director, Export Manufacturing Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 4 -->
+    <div class="usecase-panel" id="uc-3">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Dispatch &amp; Logistics</div>
+        <h3>The Delivery Proof Dilemma — Goods delivered. No proof. ₹3.2L in legal fees.</h3>
+        <div class="uc-scene">"₹34 lakhs dispatched in a week. Two customers disputed delivery — one claimed wrong quantity, one denied receipt altogether. No Delivery Challan existed: no vehicle number, no driver, no quantity confirmation. A legal notice arrived. Six months of proceedings, ₹3.2L in legal fees, to recover ₹6L already earned."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Goods leave the warehouse with no formal numbered dispatch document</li>
+          <li><span class="pain-icon">✗</span> No vehicle number, driver name, or customer acknowledgement recorded</li>
+          <li><span class="pain-icon">✗</span> Quantity disputes impossible to counter without a dispatch trail</li>
+          <li><span class="pain-icon">✗</span> Partial shipments across multiple trips — no tracking of what went when</li>
+          <li><span class="pain-icon">✗</span> Invoice raised before goods ready — no document linking them at dispatch</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Auto-numbered Delivery Challans (DC-0001, DC-0002…) — no gaps or duplicates</li>
+            <li><span class="sol-icon">✓</span> Items pre-filled from linked sales invoice — staff only confirm dispatched qty</li>
+            <li><span class="sol-icon">✓</span> Vehicle number and driver name captured for every dispatch</li>
+            <li><span class="sol-icon">✓</span> Draft → Dispatched → Delivered status with timestamps</li>
+            <li><span class="sol-icon">✓</span> Full challan history visible on every invoice for phased deliveries</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">0</div><div class="metric-label">Delivery disputes without documentary evidence</div></div>
+          <div class="metric-card"><div class="metric-num">100%</div><div class="metric-label">Dispatches covered by numbered challan</div></div>
+          <div class="metric-card"><div class="metric-num">₹3.2L</div><div class="metric-label">Legal cost avoided per defended dispute</div></div>
+        </div>
+        <div class="uc-quote">"Six months in court over ₹6 lakhs. If I had a delivery challan, that dispute would have ended in six minutes." <div class="uc-quote-attr">— Managing Director, Trading &amp; Distribution Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 5 -->
+    <div class="usecase-panel" id="uc-4">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Purchase &amp; Payables</div>
+        <h3>The Vendor Relationship Breakdown — ₹6.8L overpaid. ₹20L credit limit cut overnight.</h3>
+        <div class="uc-scene">"Mehta Components had 60 suppliers tracked in one executive's Excel sheet. His three-week medical leave broke everything: ₹6.8L paid twice to two suppliers, three suppliers unpaid 90+ days beyond terms, and one key vendor cut their credit limit from ₹30L to ₹10L — forcing an emergency loan at 16% interest."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Same invoice paid twice — no invoice-matching control in Excel</li>
+          <li><span class="pain-icon">✗</span> Supplier payment terms missed — damaging relationships and triggering interest</li>
+          <li><span class="pain-icon">✗</span> No consolidated vendor ageing — cash flow planning impossible</li>
+          <li><span class="pain-icon">✗</span> TDS deductions missed on vendor payments — surprise tax liabilities</li>
+          <li><span class="pain-icon">✗</span> Zero visibility when one person is the entire payables system</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Invoice-linked payment recording — duplicate payment structurally impossible</li>
+            <li><span class="sol-icon">✓</span> Vendor Ageing Report — 0–30, 31–60, 61–90, 90+ day buckets</li>
+            <li><span class="sol-icon">✓</span> TDS percentage and amount captured at payment time — auto TDS register</li>
+            <li><span class="sol-icon">✓</span> Supplier Party Statement — complete debit-credit-balance ledger from day one</li>
+            <li><span class="sol-icon">✓</span> NEFT/RTGS/Cheque/Cash — every mode logged with reference number</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">₹6.8L</div><div class="metric-label">Duplicate payments prevented per audit cycle</div></div>
+          <div class="metric-card"><div class="metric-num">100%</div><div class="metric-label">Payments linked to invoices — zero orphan transactions</div></div>
+          <div class="metric-card"><div class="metric-num">30%</div><div class="metric-label">Improvement in vendor payment timeliness</div></div>
+        </div>
+        <div class="uc-quote">"We lost a ₹20L credit line because our payment history looked unreliable. With Prabandh, every vendor sees consistent, documented, on-time payments." <div class="uc-quote-attr">— CFO, Components Manufacturing Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 6 -->
+    <div class="usecase-panel" id="uc-5">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Accounting &amp; Cash Flow</div>
+        <h3>The Cash Flow Black Hole — ₹45L profit on paper. Zero cash to pay salaries.</h3>
+        <div class="uc-scene">"Arjun's consulting firm showed ₹45L profit in books. But the bank balance was near zero and salary day was three days away. Payments were scattered across two current accounts, a savings account, and a petty cash register — with no consolidated view. He took an emergency loan at 18% to bridge what he'd already earned."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Multiple bank accounts and cash registers with no consolidated real-time view</li>
+          <li><span class="pain-icon">✗</span> Reported profit vs. actual cash position are completely different numbers</li>
+          <li><span class="pain-icon">✗</span> Advance payments and deposits not tracked — cash flow forecasting impossible</li>
+          <li><span class="pain-icon">✗</span> Month-end bank reconciliation takes 4+ days of manual cross-checking</li>
+          <li><span class="pain-icon">✗</span> Emergency loans at high interest to cover gaps that shouldn't exist</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Multi-account dashboard — all banks + cash registers in one real-time view</li>
+            <li><span class="sol-icon">✓</span> Payments In/Out by mode: NEFT, RTGS, Cheque, Cash — all tracked</li>
+            <li><span class="sol-icon">✓</span> Journal entries for advance payments, deposits and adjustments</li>
+            <li><span class="sol-icon">✓</span> Account-wise statements for instant bank reconciliation</li>
+            <li><span class="sol-icon">✓</span> Real-time P&amp;L vs. Cash Position — know the difference at a glance</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">Real-time</div><div class="metric-label">Cash position across all accounts — always current</div></div>
+          <div class="metric-card"><div class="metric-num">0</div><div class="metric-label">Emergency loans taken for avoidable cash gaps</div></div>
+          <div class="metric-card"><div class="metric-num">4 hrs</div><div class="metric-label">Bank reconciliation time (down from 4 days)</div></div>
+        </div>
+        <div class="uc-quote">"I was running a profitable business and couldn't pay salaries on time. Now I see my exact cash position every morning before I even have my chai." <div class="uc-quote-attr">— Managing Partner, Professional Services Firm</div></div>
+      </div>
+    </div>
+
+    <!-- UC 7 -->
+    <div class="usecase-panel" id="uc-6">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · HR &amp; Payroll</div>
+        <h3>The Payroll Fraud Scandal — 3 ghost employees. ₹4.2L monthly. Caught 8 months too late.</h3>
+        <div class="uc-scene">"A 200-employee manufacturer's HR team used Excel for attendance and payroll. Buddy-punching was rampant. An internal audit discovered three ghost employees — added six months prior — drawing full salaries. Total loss: ₹4.2L per month for eight months. The HR manager and two supervisors resigned. The Excel file was the only 'system'."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Manual attendance in registers — buddy-punching impossible to detect</li>
+          <li><span class="pain-icon">✗</span> Payroll calculated manually from attendance sheets — errors and fraud go undetected</li>
+          <li><span class="pain-icon">✗</span> No audit trail — nobody knows who added which employee or changed which salary</li>
+          <li><span class="pain-icon">✗</span> Advance payments against salary not tracked — deductions missed at month-end</li>
+          <li><span class="pain-icon">✗</span> Late salary processing causes attrition — good employees leave first</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Digital attendance with unique employee codes — no buddy-punching possible</li>
+            <li><span class="sol-icon">✓</span> Payroll auto-calculated from attendance — zero manual computation</li>
+            <li><span class="sol-icon">✓</span> Complete audit trail — every employee record, salary change, and advance logged</li>
+            <li><span class="sol-icon">✓</span> Advance tracking with automatic deduction at payroll processing</li>
+            <li><span class="sol-icon">✓</span> Professional salary slips generated and distributed digitally</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">₹4.2L</div><div class="metric-label">Monthly payroll fraud prevented</div></div>
+          <div class="metric-card"><div class="metric-num">0</div><div class="metric-label">Ghost employees possible with digital audit trail</div></div>
+          <div class="metric-card"><div class="metric-num">1 day</div><div class="metric-label">Payroll processing time (down from 5 days)</div></div>
+        </div>
+        <div class="uc-quote">"The fraud ran for 8 months because no system existed to question it. Prabandh's audit trail means every rupee of payroll is traceable to an attendance record." <div class="uc-quote-attr">— HR Director, Manufacturing Company</div></div>
+      </div>
+    </div>
+
+    <!-- UC 8 -->
+    <div class="usecase-panel" id="uc-7">
+      <div class="uc-story">
+        <div class="uc-story-tag">⚠️ Pain Area · Reports &amp; Analytics</div>
+        <h3>The Management Decision Desert — Decisions made on 90-day-old data. Opportunities lost forever.</h3>
+        <div class="uc-scene">"The MD asked for a sales performance report before the Q4 push. Finance took four days. When the report arrived, the window to redirect the sales team had passed. Meanwhile, a slow-moving product was being over-produced because nobody had a real-time view of what was actually selling — and what wasn't."</div>
+        <ul class="pain-list">
+          <li><span class="pain-icon">✗</span> Management decisions made on month-old or quarter-old manually compiled reports</li>
+          <li><span class="pain-icon">✗</span> No real-time product-wise or customer-wise sales analysis</li>
+          <li><span class="pain-icon">✗</span> Balance sheet and P&amp;L prepared manually — errors and delays inevitable</li>
+          <li><span class="pain-icon">✗</span> Finance team spends 4+ days per month compiling reports instead of analysing them</li>
+          <li><span class="pain-icon">✗</span> No KPI visibility — MD and board fly completely blind between reporting cycles</li>
+        </ul>
+      </div>
+      <div class="uc-solution">
+        <div class="uc-sol-header">
+          <h4>✅ How Prabandh Solves It</h4>
+          <ul class="sol-list">
+            <li><span class="sol-icon">✓</span> Live KPI Dashboard — Sales, Receivables, Stock Alerts at a glance, always current</li>
+            <li><span class="sol-icon">✓</span> One-click P&amp;L Report, Balance Sheet, and Receivables/Payables Ageing</li>
+            <li><span class="sol-icon">✓</span> GSTR-1 and GSTR-3B summaries auto-generated — no manual reconciliation</li>
+            <li><span class="sol-icon">✓</span> Role-based report access — executives see what they need, nothing they shouldn't</li>
+            <li><span class="sol-icon">✓</span> Drill-down from summary to individual transaction in two clicks</li>
+          </ul>
+        </div>
+        <div class="uc-metrics">
+          <div class="metric-card"><div class="metric-num">Real-time</div><div class="metric-label">KPI visibility — zero wait, zero manual compilation</div></div>
+          <div class="metric-card"><div class="metric-num">0 min</div><div class="metric-label">Report generation time for P&amp;L, GSTR, Ageing</div></div>
+          <div class="metric-card"><div class="metric-num">100%</div><div class="metric-label">Decision accuracy — data-driven, always current</div></div>
+        </div>
+        <div class="uc-quote">"We used to make ₹50L decisions based on 3-month-old data. Now the MD checks live KPIs every morning before the 9 AM call. The business runs differently." <div class="uc-quote-attr">— CFO, Mid-Market Trading Group</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MODULES ══════════════ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="text-center">
+      <div class="tag">Complete Module Suite</div>
+      <h2 class="section-title">Every Module Your Business Needs.<br>Nothing You Don't.</h2>
+      <p class="section-sub">12 deeply integrated modules — all talking to each other, all secured by role-based access, all available from day one.</p>
+    </div>
+    <div class="modules-grid fade-up">
+      <div class="module-card"><div class="module-icon" style="background:#dbeafe">⊞</div><h3>Dashboard</h3><p>Live KPI cards, revenue charts, stock alerts, and recent transactions. The command centre every decision-maker needs.</p><div class="module-roles"><span class="module-role-tag">All Roles</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#f0fdf4">👥</div><h3>Parties</h3><p>Unified customer and supplier management with credit limits, payment terms, opening balances, and GSTIN validation.</p><div class="module-roles"><span class="module-role-tag">Admin</span><span class="module-role-tag">Sales</span><span class="module-role-tag">Accounts</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#fff7ed">📦</div><h3>Items &amp; Stock</h3><p>Item catalogue with HSN/SAC, multi-godown stock ledger, batch tracking, reorder alerts, and stock transfer management.</p><div class="module-roles"><span class="module-role-tag">Warehouse</span><span class="module-role-tag">Purchase</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#fdf2f8">🏭</div><h3>Manufacturing</h3><p>Job work tracking, BOM management, production orders, and raw material consumption linked to finished goods.</p><div class="module-roles"><span class="module-role-tag">Admin</span><span class="module-role-tag">Manager</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#f0f9ff">🧾</div><h3>Sales</h3><p>Sales invoices, quotations, delivery challans, credit notes, and WhatsApp/SMS delivery. Auto GST, partial payments, ageing reports.</p><div class="module-roles"><span class="module-role-tag">Sales Staff</span><span class="module-role-tag">Accounts</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#f0fdf4">🛒</div><h3>Purchase</h3><p>Purchase orders, invoices, GRN, debit notes, TDS capture, and vendor payment tracking with full ageing view.</p><div class="module-roles"><span class="module-role-tag">Accounts</span><span class="module-role-tag">Warehouse</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#fffbeb">💰</div><h3>Accounting</h3><p>Multi-account cash and bank management, journal entries, payment modes, bank statements, and real-time P&amp;L.</p><div class="module-roles"><span class="module-role-tag">Accountant</span><span class="module-role-tag">Admin</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#fdf4ff">👤</div><h3>HR &amp; Payroll</h3><p>Employee directory, digital attendance, salary structure, payroll processing, advance tracking, and salary slip generation.</p><div class="module-roles"><span class="module-role-tag">HR</span><span class="module-role-tag">Admin</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#f0fdf4">📊</div><h3>Reports</h3><p>GSTR-1, GSTR-3B, Balance Sheet, P&amp;L, Receivables Ageing, Payables Ageing — all one-click, always reconciled.</p><div class="module-roles"><span class="module-role-tag">Accounts</span><span class="module-role-tag">Executive</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#dbeafe">🕐</div><h3>Timesheets</h3><p>Employee time tracking by project or task, approval workflows, and billable hours reporting for service businesses.</p><div class="module-roles"><span class="module-role-tag">All Staff</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#fff7ed">💳</div><h3>Expenses</h3><p>Employee expense claims with receipt upload, approval workflows, and automatic accounting integration for clean books.</p><div class="module-roles"><span class="module-role-tag">All Staff</span></div></div>
+      <div class="module-card"><div class="module-icon" style="background:#f5f3ff">⚙️</div><h3>Settings &amp; Admin</h3><p>Company profile, GSTIN, multi-company setup, user management, role assignments, module permissions, and audit logs.</p><div class="module-roles"><span class="module-role-tag">Admin Only</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ WHY PRABANDH ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="tag">Why Prabandh?</div>
+        <h2 class="section-title" style="text-align:left;margin-bottom:32px">Built for India.<br>Built for Growth.</h2>
+        <div class="why-list">
+          <div class="why-item fade-up"><div class="why-icon">🇮🇳</div><div><h4>GST-Native from Day One</h4><p>Not retrofitted — Prabandh was architected around Indian GST. GSTR-1, GSTR-3B, E-Invoicing, HSN locking — built in, not bolted on.</p></div></div>
+          <div class="why-item fade-up"><div class="why-icon">🔐</div><div><h4>Granular Role-Based Access</h4><p>10 user roles. Module-level permissions per company. Your sales team sees Sales — not HR. Your HR team sees HR — not Accounting. Configured in minutes.</p></div></div>
+          <div class="why-item fade-up"><div class="why-icon">🏭</div><div><h4>Multi-Godown. Multi-Company.</h4><p>Manage multiple warehouses, branches, or group companies from a single login. Real-time stock consolidation across every location.</p></div></div>
+          <div class="why-item fade-up"><div class="why-icon">📱</div><div><h4>WhatsApp &amp; SMS Integration</h4><p>Send invoices, payment reminders, and order confirmations via WhatsApp and SMS — directly from the platform, with zero manual copy-paste.</p></div></div>
+          <div class="why-item fade-up"><div class="why-icon">🔄</div><div><h4>Tally Compatible</h4><p>Already on Tally? Export your ERP data as Tally XML for seamless reconciliation. Switch gradually — no big-bang migration required.</p></div></div>
+        </div>
+      </div>
+      <div class="why-visual fade-up">
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;margin-bottom:20px;text-transform:uppercase;letter-spacing:.06em">Prabandh vs. The Alternatives</h4>
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th style="text-align:center">Prabandh</th>
+              <th style="text-align:center">Tally</th>
+              <th style="text-align:center">Excel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="comp-feat">Cloud Access (Anywhere)</td><td class="comp-check">✓</td><td class="comp-cross">✗</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">GST Auto-Calculation</td><td class="comp-check">✓</td><td class="comp-check">✓</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Multi-Godown Stock</td><td class="comp-check">✓</td><td class="comp-partial">~</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Role-Based Access</td><td class="comp-check">✓</td><td class="comp-partial">~</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">WhatsApp Notifications</td><td class="comp-check">✓</td><td class="comp-cross">✗</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">HR &amp; Payroll Built-in</td><td class="comp-check">✓</td><td class="comp-cross">✗</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Real-time Multi-user</td><td class="comp-check">✓</td><td class="comp-partial">~</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Delivery Challans</td><td class="comp-check">✓</td><td class="comp-check">✓</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Audit Trail</td><td class="comp-check">✓</td><td class="comp-partial">~</td><td class="comp-cross">✗</td></tr>
+            <tr><td class="comp-feat">Affordable for SMEs</td><td class="comp-check">✓</td><td class="comp-partial">~</td><td class="comp-check">✓</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:16px;font-size:.72rem;color:rgba(255,255,255,.3)">✓ Full support &nbsp; ~ Partial/addon required &nbsp; ✗ Not available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SCREENSHOTS ══════════════ -->
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  SCREENSHOT GALLERY — HOW TO ADD REAL SCREENSHOTS              ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  1. Take screenshots of each module from your running app       ║
+  ║     at https://prabandh.atithi-setu.com                        ║
+  ║  2. Save them in a folder named "screenshots/" beside this file ║
+  ║  3. Name them: dashboard.png, sales.png, purchase.png, etc.    ║
+  ║  4. Replace each <div class="ss-placeholder"> block with:       ║
+  ║     <img src="screenshots/dashboard.png" alt="Dashboard">       ║
+  ║  5. The lightbox will automatically show the full image         ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<section class="section" id="screenshots">
+  <div class="container">
+    <div class="screenshots-intro">
+      <div class="tag tag-green">Application Glossary</div>
+      <h2 class="section-title">See Prabandh in Action</h2>
+      <p class="section-sub">Every screen designed for clarity, speed, and zero training overhead. Your team will be productive from day one.</p>
+    </div>
+    <div class="ss-grid">
+
+      <div class="ss-card" onclick="openLightbox('screenshots/dashboard.png','Dashboard — Live KPI Command Center')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/dashboard</div></div>
+          <div class="ss-body">
+            <img src="screenshots/dashboard.png" alt="Dashboard" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">⊞</div><div class="ss-placeholder-text">Dashboard<br>KPI Cards · Revenue Charts · Stock Alerts</div><div class="ss-placeholder-hint">Add: screenshots/dashboard.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Dashboard</h4><p>Real-time KPIs, revenue charts, receivables, and stock alerts in one unified view</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/sales.png','Sales — Invoice Management & Collections')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/sales</div></div>
+          <div class="ss-body">
+            <img src="screenshots/sales.png" alt="Sales" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">🧾</div><div class="ss-placeholder-text">Sales Module<br>Invoices · Quotations · Challans · Payments</div><div class="ss-placeholder-hint">Add: screenshots/sales.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Sales Management</h4><p>Invoices with UNPAID/PARTIAL/PAID status, PDF download, WhatsApp delivery</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/purchase.png','Purchase — PO & Vendor Management')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/purchase</div></div>
+          <div class="ss-body">
+            <img src="screenshots/purchase.png" alt="Purchase" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">🛒</div><div class="ss-placeholder-text">Purchase Module<br>Purchase Orders · Bills · Vendor Payments</div><div class="ss-placeholder-hint">Add: screenshots/purchase.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Purchase Management</h4><p>POs, bills, GRN, TDS capture, and vendor payment tracking with ageing</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/parties.png','Parties — Customer & Supplier Directory')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/parties</div></div>
+          <div class="ss-body">
+            <img src="screenshots/parties.png" alt="Parties" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">👥</div><div class="ss-placeholder-text">Parties Module<br>Customers · Suppliers · GSTIN · Ledger</div><div class="ss-placeholder-hint">Add: screenshots/parties.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Party Management</h4><p>Customers and suppliers with GSTIN, credit limits, payment terms, and ledger</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/items.png','Items & Stock — Inventory Management')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/items</div></div>
+          <div class="ss-body">
+            <img src="screenshots/items.png" alt="Items & Stock" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">📦</div><div class="ss-placeholder-text">Items & Stock<br>Catalogue · Multi-Godown · HSN · Reorder</div><div class="ss-placeholder-hint">Add: screenshots/items.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Items &amp; Stock</h4><p>Item catalogue with HSN, multi-godown stock levels, and intelligent reorder alerts</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/accounting.png','Accounting — Cash & Bank Management')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/accounting</div></div>
+          <div class="ss-body">
+            <img src="screenshots/accounting.png" alt="Accounting" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">💰</div><div class="ss-placeholder-text">Accounting<br>Cash · Bank · Journal · Statements</div><div class="ss-placeholder-hint">Add: screenshots/accounting.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Accounting</h4><p>Multi-account cash and bank management with real-time balances and statements</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/hr.png','HR & Payroll Management')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/hr</div></div>
+          <div class="ss-body">
+            <img src="screenshots/hr.png" alt="HR & Payroll" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">👤</div><div class="ss-placeholder-text">HR & Payroll<br>Employees · Attendance · Salary · Advances</div><div class="ss-placeholder-hint">Add: screenshots/hr.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>HR &amp; Payroll</h4><p>Employee directory, digital attendance, payroll automation, and salary slips</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/reports.png','Reports — GSTR, P&L, Balance Sheet')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/reports</div></div>
+          <div class="ss-body">
+            <img src="screenshots/reports.png" alt="Reports" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">📊</div><div class="ss-placeholder-text">Reports<br>GSTR-1 · GSTR-3B · P&L · Balance Sheet</div><div class="ss-placeholder-hint">Add: screenshots/reports.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Reports &amp; Analytics</h4><p>GSTR-1, GSTR-3B, P&amp;L, Balance Sheet, and Ageing reports — always reconciled</p></div>
+      </div>
+
+      <div class="ss-card" onclick="openLightbox('screenshots/manufacturing.png','Manufacturing — Job Work & BOM')">
+        <div class="ss-frame">
+          <div class="ss-topbar"><div class="ss-dot" style="background:#ff5f57"></div><div class="ss-dot" style="background:#ffbd2e"></div><div class="ss-dot" style="background:#28c840"></div><div class="ss-url">prabandh.atithi-setu.com/manufacturing</div></div>
+          <div class="ss-body">
+            <img src="screenshots/manufacturing.png" alt="Manufacturing" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ss-placeholder" style="display:none"><div class="ss-placeholder-icon">🏭</div><div class="ss-placeholder-text">Manufacturing<br>Production Orders · BOM · Job Work</div><div class="ss-placeholder-hint">Add: screenshots/manufacturing.png</div></div>
+            <div class="ss-overlay">🔍 View Full Screen</div>
+          </div>
+        </div>
+        <div class="ss-label"><h4>Manufacturing</h4><p>Production orders, BOM, job work tracking, and raw material consumption</p></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://prabandh.atithi-setu.com/login" target="_blank" class="btn btn-outline">🔍 Explore Live Application →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ══════════════ PRICING ══════════════ -->
+
+<!--
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <div class="text-center">
+      <div class="tag">Transparent Pricing</div>
+      <h2 class="section-title">Plans That Scale With Your Business</h2>
+      <p class="section-sub">Start free, grow at your pace. No hidden charges. No per-module fees. Every plan includes all 12 modules.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card fade-up">
+        <div class="price-plan">Trial</div>
+        <div class="price-amount">₹0 <span>/ month</span></div>
+        <div class="price-users">Up to 5 users · 30 days free</div>
+        <ul class="price-features">
+          <li>All 12 modules included</li>
+          <li>Up to 5 user accounts</li>
+          <li>GST reports &amp; compliance</li>
+          <li>PDF invoices &amp; challans</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#demo" class="btn btn-outline price-cta" style="text-align:center;justify-content:center">Start Free Trial</a>
+      </div>
+      <div class="price-card fade-up">
+        <div class="price-plan">Standard</div>
+        <div class="price-amount">₹499 <span>/ user / mo</span></div>
+        <div class="price-users">Up to 10 users · ₹4,990/month total</div>
+        <ul class="price-features">
+          <li>All 12 modules included</li>
+          <li>Up to 10 user accounts</li>
+          <li>WhatsApp &amp; SMS notifications</li>
+          <li>Multi-godown support</li>
+          <li>Priority email support</li>
+        </ul>
+        <a href="#demo" class="btn btn-outline price-cta" style="text-align:center;justify-content:center">Get Started</a>
+      </div>
+      <div class="price-card featured fade-up">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-plan">Professional</div>
+        <div class="price-amount">₹399 <span>/ user / mo</span></div>
+        <div class="price-users">Up to 25 users · ₹9,975/month total</div>
+        <ul class="price-features">
+          <li>All 12 modules included</li>
+          <li>Up to 25 user accounts</li>
+          <li>Role-based module permissions</li>
+          <li>Tally XML export</li>
+          <li>Multi-company management</li>
+          <li>Dedicated account manager</li>
+          <li>Phone &amp; WhatsApp support</li>
+        </ul>
+        <a href="#demo" class="btn btn-primary price-cta" style="text-align:center;justify-content:center">Book a Demo</a>
+      </div>
+      <div class="price-card fade-up">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-amount">₹299 <span>/ user / mo</span></div>
+        <div class="price-users">100+ users · Custom billing</div>
+        <ul class="price-features">
+          <li>All 12 modules included</li>
+          <li>Unlimited users</li>
+          <li>Custom module permissions</li>
+          <li>On-premise deployment option</li>
+          <li>Custom integrations &amp; APIs</li>
+          <li>Dedicated implementation team</li>
+          <li>SLA-backed 24/7 support</li>
+        </ul>
+        <a href="#demo" class="btn btn-outline price-cta" style="text-align:center;justify-content:center">Contact Sales</a>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--gray-400);font-size:.85rem">All prices exclusive of GST. Annual billing available at 2 months free. Migration assistance included in all plans.</p>
+  </div>
+</section>
+-->
+
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<!--
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <div class="tag tag-green">Customer Stories</div>
+      <h2 class="section-title">Businesses That Transformed with Prabandh</h2>
+      <p class="section-sub">Real outcomes from real businesses — across trading, manufacturing, and professional services.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We recovered ₹12 lakhs in the first month simply because we could finally see what was unpaid. For the first time in 15 years of business, I know exactly who owes me what, down to the last rupee. The receivables ageing report alone paid for three years of subscription in 30 days."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">SM</div>
+          <div><div class="testi-name">Sanjay Mehta</div><div class="testi-role">Owner, Sanjay Enterprises · Distribution &amp; Trading, Mumbai</div></div>
+        </div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The GST demand notice was a ₹19 lakh wake-up call. After Prabandh, our GSTR-1 is generated in two hours, reconciles perfectly with our books, and our CA hasn't found a single mismatch in six months. The peace of mind alone is worth every rupee of the subscription."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">RK</div>
+          <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">Finance Director, Rajan Exports · Export Manufacturing, Surat</div></div>
+        </div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Before Prabandh, we bought ₹18 lakhs of fabric we already owned — just in a different city. Now every godown is visible on one screen. Our purchase team checks consolidated stock before raising a single PO. We've cut unnecessary orders by 28% in the first quarter alone."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#d97706,#b45309)">PS</div>
+          <div><div class="testi-name">Priya Sharma</div><div class="testi-role">Managing Director, Priya Textiles · Wholesale, Pune</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center">
+      <div class="tag">Questions Answered</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub" style="margin-bottom:40px">Everything you need to know before making the switch.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">How long does it take to get started on Prabandh? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Most businesses are live within 1–2 business days. Our onboarding team helps you set up your company profile, import your party master and item catalogue, and configure user roles. The trial starts immediately — no installation, no server setup.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">Can I migrate data from Tally or Excel? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. Prabandh supports Tally XML export for ongoing reconciliation, and our team assists with importing party masters, item catalogues, and opening balances from Excel. You don't need to start from scratch — we meet you where your data is.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">Is Prabandh compliant with Indian GST regulations? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. Prabandh was built ground-up for Indian GST compliance. HSN/SAC codes are locked in the item master. CGST/SGST vs IGST is auto-calculated based on party state and company GSTIN. GSTR-1 and GSTR-3B summaries are generated with one click, pre-reconciled against your books.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">What happens if my business needs change and I need more users? <span class="faq-icon">+</span></div>
+        <div class="faq-a">You can upgrade your plan at any time from the Settings → Subscription screen. Your data is preserved, your users continue uninterrupted, and billing is prorated for the remaining period. Downgrading follows the same seamless process at next renewal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">How does role-based access control work? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Prabandh offers 10 predefined role profiles: Admin, Enterprise Admin, Manager, Accountant, Sales Staff, Warehouse, HR, Executive, View Only, and Employee. Each role sees only the modules relevant to their function — Sales Staff cannot see HR or Accounting. App-level administrators can further customise module access per role for each company.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">Is my business data secure on Prabandh? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. All data is transmitted over TLS 1.3 encryption. Passwords are hashed with bcrypt (never stored in plain text). Each company's data is strictly isolated — no company can access another's records. JWT authentication tokens expire after 7 days. A complete audit log tracks every user action in the system.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">Can I manage multiple companies from one account? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. Prabandh is built for multi-company management from day one. Each company has its own isolated data, its own users and roles, and its own GST registration. An Application Administrator can oversee all companies, configure permissions, and manage subscriptions from a dedicated Admin Portal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">What support is available after I sign up? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Trial and Standard plans include email support with a 24-hour response SLA. Professional plans get a dedicated account manager plus phone and WhatsApp support. Enterprise plans receive SLA-backed 24/7 support with a dedicated implementation team for onboarding, training, and custom requirements.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section class="cta-section" id="demo">
+  <div class="container">
+    <div class="tag" style="background:rgba(129,140,248,.15);color:var(--indigo-light)">Book a Free Demo</div>
+    <h2>Ready to Take Command of Your Business?</h2>
+    <p>See Prabandh live in 30 minutes. We'll walk through your specific use case — no generic demos, no sales pressure.</p>
+    <div class="demo-form">
+      <!-- ═══════════════════════════════════════════════════════════════
+           FORMSPREE SETUP — 3 easy steps to activate email delivery:
+           ───────────────────────────────────────────────────────────────
+           1. Go to https://formspree.io and sign up (free)
+           2. Click "New Form" → enter YOUR email → copy the Form ID
+              (looks like: xknqpzya)
+           3. Replace YOUR_FORMSPREE_ID below with that Form ID
+           ═══════════════════════════════════════════════════════════════ -->
+      <form id="demoForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" name="name" placeholder="Rajesh Kumar" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label>Company Name *</label>
+            <input type="text" name="company" placeholder="Sharma Enterprises" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile Number *</label>
+            <input type="tel" name="mobile" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="rajesh@company.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Business Type</label>
+            <select name="industry">
+              <option value="">Select your industry</option>
+              <option>Trading &amp; Distribution</option>
+              <option>Manufacturing</option>
+              <option>Wholesale &amp; Retail</option>
+              <option>Professional Services</option>
+              <option>Construction &amp; Infrastructure</option>
+              <option>Textile &amp; Apparel</option>
+              <option>Food &amp; FMCG</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Team Size</label>
+            <select name="team_size">
+              <option>1–5 people</option>
+              <option>6–15 people</option>
+              <option>16–50 people</option>
+              <option>50–100 people</option>
+              <option>100+ people</option>
+            </select>
+          </div>
+        </div>
+        <!-- Honeypot anti-spam field (hidden from real users) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-error-msg" id="formError"></div>
+        <button type="submit" id="formSubmitBtn" class="btn btn-primary form-submit">
+          🚀 Book My Free 30-Minute Demo
+        </button>
+      </form>
+
+      <!-- Success state (shown after submission) -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>Demo Request Received!</h3>
+        <p>Thank you! Our team will reach out to you within <strong style="color:#fff">2 business hours</strong> to confirm your demo slot.<br><br>In the meantime, feel free to explore the live application.</p>
+        <div style="margin-top:28px">
+          <a href="https://prabandh.atithi-setu.com/login" target="_blank" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3)">Explore Live App →</a>
+        </div>
+      </div>
+
+      <p style="color:rgba(255,255,255,.4);font-size:.78rem;margin-top:16px;text-align:center">No spam. No obligation. We respond within 2 business hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:16px">
+          <div class="logo-badge">प</div>
+          <div><span class="logo-text">Prabandh</span><div class="logo-sub">by Manhotra Consulting Services</div></div>
+        </div>
+        <p>India's most complete cloud ERP — built ground-up for GST compliance, multi-location operations, and the real challenges of growing Indian businesses.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">🇮🇳 Made in India</span>
+          <span class="footer-badge">✓ GST Compliant</span>
+          <span class="footer-badge">🔒 SOC-2 Ready</span>
+          <span class="footer-badge">☁️ Cloud Native</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="#features">All Modules</a></li>
+          <li><a href="#usecases">Use Cases</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="https://prabandh.atithi-setu.com/login" target="_blank">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="#usecases">Sales &amp; Receivables</a></li>
+          <li><a href="#usecases">Inventory Management</a></li>
+          <li><a href="#usecases">GST Compliance</a></li>
+          <li><a href="#usecases">HR &amp; Payroll</a></li>
+          <li><a href="#usecases">Manufacturing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@manhotraconsulting.in">contact@manhotraconsulting.in</a></li>
+          <li><a href="mailto:products@manhotraconsulting.in">products@manhotraconsulting.in</a></li>
+          <li><a href="#demo">Book a Demo</a></li>
+        </ul>
+        <div style="margin-top:20px">
+          <h4 style="margin-bottom:12px">Follow Us</h4>
+          <div class="footer-social">
+            <!--<a href="#" class="social-link" title="LinkedIn">in</a> -->
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Manhotra Consulting Services Pvt Ltd. All rights reserved. </div>
+	  <!--
+      <div style="display:flex;gap:20px;font-size:.8rem">
+        <a href="#" style="color:rgba(255,255,255,.4)">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,.4)">Terms of Service</a>
+        <a href="#" style="color:rgba(255,255,255,.4)">Refund Policy</a>
+      </div>
+    </div>
+	-->
+  </div>
+</footer>
+
+<script>
+// ── Nav scroll shadow
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=window.scrollY>10?'0 2px 20px rgba(0,0,0,.3)':'none';
+});
+
+// ── Use Case tabs
+function showUC(idx){
+  document.querySelectorAll('.usecase-panel').forEach((p,i)=>{p.classList.toggle('active',i===idx)});
+  document.querySelectorAll('.uc-tab').forEach((t,i)=>{t.classList.toggle('active',i===idx)});
+}
+
+// ── FAQ accordion
+function toggleFAQ(el){
+  const item=el.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+// ── Lightbox
+function openLightbox(src,caption){
+  const lb=document.getElementById('lightbox');
+  const img=document.getElementById('lightboxImg');
+  const cap=document.getElementById('lightboxCaption');
+  img.src=src;
+  img.onerror=()=>{img.src='';cap.textContent=caption+' — Add screenshot to screenshots/ folder';};
+  cap.textContent=caption;
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+// ── Intersection Observer (fade-up + counters)
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      // Counter animation
+      const num=e.target.querySelector('[data-target]');
+      if(num&&!num.dataset.done){
+        num.dataset.done='1';
+        const target=parseInt(num.dataset.target);
+        let current=0;
+        const step=Math.ceil(target/60);
+        const t=setInterval(()=>{
+          current=Math.min(current+step,target);
+          num.textContent=current+(target>=100?'+':'');
+          if(current>=target)clearInterval(t);
+        },16);
+      }
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.15});
+document.querySelectorAll('.fade-up,.trust-stats > div').forEach(el=>io.observe(el));
+
+// ── Mock chart bars (CSS-only visual)
+const colors=['#818cf8','#60a5fa','#34d399','#a78bfa','#f472b6','#fb923c','#4ade80'];
+const heights=[40,65,50,80,45,70,60];
+const chart=document.getElementById('mockChart');
+if(chart){
+  heights.forEach((h,i)=>{
+    const bar=document.createElement('div');
+    bar.className='mock-bar';
+    bar.style.cssText=`height:${h}%;background:${colors[i%colors.length]};`;
+    chart.appendChild(bar);
+  });
+}
+
+// ── Mobile menu toggle
+function toggleMenu(){
+  const links=document.querySelector('.nav-links');
+  const ctas=document.querySelector('.nav-ctas');
+  if(links){
+    const open=links.style.display==='flex';
+    links.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(15,23,42,.98);padding:24px;gap:20px;border-bottom:1px solid rgba(255,255,255,.1)';
+    if(ctas)ctas.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:200px;left:0;right:0;background:rgba(15,23,42,.98);padding:0 24px 24px;gap:12px';
+  }
+}
+
+// ── Formspree Demo Form Submission
+// ─────────────────────────────────────────────────────────────────────
+// SETUP: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
+// Get it free at https://formspree.io → New Form → copy the ID
+// Example: if your endpoint is https://formspree.io/f/xknqpzya
+//          set FORMSPREE_ID = 'xknqpzya'
+// ─────────────────────────────────────────────────────────────────────
+const FORMSPREE_ID = 'xlgpvrjz'; // https://formspree.io/f/xlgpvrjz
+
+const demoForm   = document.getElementById('demoForm');
+const submitBtn  = document.getElementById('formSubmitBtn');
+const formError  = document.getElementById('formError');
+const formSuccess= document.getElementById('formSuccess');
+
+if(demoForm){
+  demoForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    // Basic client-side validation
+    const required = demoForm.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field=>{
+      if(!field.value.trim()){valid=false;field.style.borderColor='#f87171';}
+      else field.style.borderColor='';
+    });
+    if(!valid){
+      showError('Please fill in all required fields marked with *');
+      return;
+    }
+
+    // Email format check
+    const emailField = demoForm.querySelector('[name="email"]');
+    if(emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)){
+      emailField.style.borderColor='#f87171';
+      showError('Please enter a valid email address.');
+      return;
+    }
+
+    // Check Formspree ID configured
+    if(FORMSPREE_ID === 'YOUR_FORMSPREE_ID'){
+      showError('⚙️ Form not yet configured. See HTML comment above for 3-step Formspree setup.');
+      return;
+    }
+
+    // Loading state
+    submitBtn.classList.add('form-btn-loading');
+    submitBtn.textContent = 'Sending your request…';
+    hideError();
+
+    try{
+      const data = new FormData(demoForm);
+      // Add metadata
+      data.set('_subject', `Prabandh Demo Request — ${data.get('company') || 'New Lead'}`);
+      data.set('_replyto', data.get('email'));
+      data.set('source_page', window.location.href);
+      data.set('submitted_at', new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));
+
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`,{
+        method:'POST',
+        body:data,
+        headers:{'Accept':'application/json'}
+      });
+
+      if(response.ok){
+        // Show success, hide form
+        demoForm.style.display='none';
+        formSuccess.classList.add('show');
+        // Scroll success into view
+        formSuccess.scrollIntoView({behavior:'smooth',block:'center'});
+      } else {
+        const json = await response.json().catch(()=>({}));
+        const msg = json.errors ? json.errors.map(e=>e.message).join(', ') : 'Submission failed. Please try again or email us directly.';
+        showError(msg);
+        resetBtn();
+      }
+    } catch(err){
+      showError('Network error. Please check your connection and try again.');
+      resetBtn();
+    }
+  });
+
+  // Clear field error on input
+  demoForm.querySelectorAll('input,select').forEach(f=>{
+    f.addEventListener('input',()=>{ f.style.borderColor=''; hideError(); });
+  });
+}
+
+function showError(msg){ formError.textContent=msg; formError.classList.add('show'); }
+function hideError(){ formError.classList.remove('show'); }
+function resetBtn(){
+  submitBtn.classList.remove('form-btn-loading');
+  submitBtn.innerHTML='🚀 Book My Free 30-Minute Demo';
+}
+
+// ── Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
