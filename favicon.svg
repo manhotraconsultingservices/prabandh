@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Outer navy circle -->
+  <circle cx="256" cy="256" r="252" fill="#1e2d4f"/>
+  <!-- Gold ring -->
+  <circle cx="256" cy="256" r="238" fill="#c9a84c"/>
+  <!-- White/cream base -->
+  <circle cx="256" cy="256" r="222" fill="#f9f7f2"/>
+
+  <!-- 6 kite segments alternating gold and navy -->
+  <!-- Segment 1: top (gold) -90° to -30°, tip at -60° -->
+  <path d="M256,34 A222,222 0 0,1 448.2,145 L313,163 Z" fill="#c9a84c"/>
+  <!-- Segment 2: top-right (navy) -30° to 30°, tip at 0° -->
+  <path d="M448.2,145 A222,222 0 0,1 448.2,367 L368,256 Z" fill="#1e2d4f"/>
+  <!-- Segment 3: bottom-right (gold) 30° to 90°, tip at 60° -->
+  <path d="M448.2,367 A222,222 0 0,1 256,478 L313,349 Z" fill="#c9a84c"/>
+  <!-- Segment 4: bottom (navy) 90° to 150°, tip at 120° -->
+  <path d="M256,478 A222,222 0 0,1 63.8,367 L199,349 Z" fill="#1e2d4f"/>
+  <!-- Segment 5: bottom-left (gold) 150° to 210°, tip at 180° -->
+  <path d="M63.8,367 A222,222 0 0,1 63.8,145 L144,256 Z" fill="#c9a84c"/>
+  <!-- Segment 6: top-left (navy) 210° to 270°, tip at 240° -->
+  <path d="M63.8,145 A222,222 0 0,1 256,34 L199,163 Z" fill="#1e2d4f"/>
+
+  <!-- White center circle -->
+  <circle cx="256" cy="256" r="118" fill="#ffffff"/>
+  <!-- Thin gold inner ring -->
+  <circle cx="256" cy="256" r="118" fill="none" stroke="#c9a84c" stroke-width="3"/>
+
+  <!-- P letter in navy serif -->
+  <text x="256" y="316"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="168"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#1e2d4f">P</text>
+</svg>
