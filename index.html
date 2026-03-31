@@ -211,6 +211,25 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,.96);backdrop-fil
 .comp-cross{color:#f87171;text-align:center}
 .comp-partial{color:var(--gold);text-align:center}
 
+/* ── ABOUT US ── */
+.about-grid{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:center}
+.about-photo-col{display:flex;flex-direction:column;align-items:center;gap:20px}
+.about-photo-wrap{width:300px;height:300px;border-radius:50%;padding:6px;background:linear-gradient(135deg,#c9a84c,#1e2d4f);box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.about-photo{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top center}
+.about-badge{background:var(--navy);color:#c9a84c;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 20px;border-radius:100px;border:1px solid rgba(201,168,76,.3)}
+.about-para{font-size:1rem;color:var(--gray-600);line-height:1.75;margin-bottom:16px}
+.about-para strong{color:var(--navy)}
+.about-divider{height:1px;background:var(--gray-200);margin:28px 0}
+.about-founder{display:flex;align-items:flex-start;gap:20px}
+.about-founder-name{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.about-founder-title{font-size:.85rem;font-weight:600;color:var(--indigo);margin-bottom:12px}
+.about-founder-bio{font-size:.95rem;color:var(--gray-600);line-height:1.7}
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-photo-col{align-items:center}
+  .about-content .section-title{text-align:center}
+}
+
 /* ── PRICING ── */
 .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:48px}
 .price-card{background:#fff;border:2px solid var(--gray-200);border-radius:var(--r-lg);padding:32px;position:relative;transition:var(--tr)}
@@ -432,6 +451,7 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#usecases">Use Cases</a></li>
+      <li><a href="#about">About Us</a></li>
       <!--<li><a href="#pricing">Pricing</a></li> -->
       <li><a href="#demo">Contact</a></li>
     </ul>
@@ -1231,6 +1251,38 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
   </div>
 </section>
 -->
+<!-- ══════════════ ABOUT US ══════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-col fade-up">
+        <div class="about-photo-wrap">
+          <img src="ankush.jpg" alt="Ankush Manhotra — Founder, Manhotra Consulting Services" class="about-photo">
+        </div>
+        <div class="about-badge">15+ Years of Transformation</div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="tag">About Us</div>
+        <h2 class="section-title" style="text-align:left;margin-bottom:24px">Built for the Businesses That Power India</h2>
+
+        <p class="about-para">India's MSMEs are the backbone of the economy — yet most of them run on Excel sheets, WhatsApp messages, and disconnected tools. Enterprise ERP solutions exist, but they come with a hard truth: <strong>prohibitive licensing costs, months of implementation, and complexity built for large enterprises — not for the businesses that actually need it most.</strong></p>
+
+        <p class="about-para">Prabandh was born from a simple but powerful belief — <strong>every MSME deserves a digital backbone.</strong> Built on deep supply chain and manufacturing experience, Prabandh was designed from the ground up to address the real pain points that existing ERP systems ignore — GST complexity, multi-godown chaos, cash flow blind spots, and HR challenges specific to Indian businesses.</p>
+
+        <div class="about-divider"></div>
+
+        <div class="about-founder">
+          <div class="about-founder-info">
+            <div class="about-founder-name">Ankush Manhotra</div>
+            <div class="about-founder-title">Founder, Manhotra Consulting Services</div>
+            <p class="about-founder-bio">With 15+ years of hands-on experience in supply chain and operations transformation, Ankush founded Manhotra Consulting Services with a mission to bring enterprise-grade business practices to India's growing MSME sector. Prabandh is the flagship product of that vision.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ FAQ ══════════════ -->
 <section class="section section-alt">
   <div class="container">
