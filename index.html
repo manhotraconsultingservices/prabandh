@@ -223,7 +223,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,.96);backdrop-fil
 .about-founder{display:flex;align-items:flex-start;gap:20px}
 .about-founder-name{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:4px}
 .about-founder-title{font-size:.85rem;font-weight:600;color:var(--indigo);margin-bottom:12px}
-.about-founder-bio{font-size:.95rem;color:var(--gray-600);line-height:1.7}
+.about-founder-bio{font-size:.95rem;color:var(--gray-600);line-height:1.7;margin-bottom:12px}
+.about-founder-linkedin{color:var(--navy);font-size:1.15rem;font-weight:700;text-decoration:none;border-bottom:2px solid #c9a84c;padding-bottom:1px;transition:color .2s}
+.about-founder-linkedin:hover{color:var(--indigo)}
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:40px}
   .about-photo-col{align-items:center}
@@ -1260,7 +1262,7 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
         <div class="about-photo-wrap">
           <img src="ankush.jpg" alt="Ankush Manhotra — Founder, Manhotra Consulting Services" class="about-photo">
         </div>
-        <div class="about-badge">15+ Years of Transformation</div>
+        <div class="about-badge">17+ Years of Transformation</div>
       </div>
       <div class="about-content fade-up">
         <div class="tag">About Us</div>
@@ -1274,9 +1276,13 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
 
         <div class="about-founder">
           <div class="about-founder-info">
-            <div class="about-founder-name">Ankush Manhotra</div>
+            <div class="about-founder-name">
+              <a href="https://www.linkedin.com/in/ankushmanhotra/" target="_blank" rel="noopener" class="about-founder-linkedin">Ankush Manhotra ↗</a>
+            </div>
             <div class="about-founder-title">Founder, Manhotra Consulting Services</div>
-            <p class="about-founder-bio">With 15+ years of hands-on experience in supply chain and operations transformation, Ankush founded Manhotra Consulting Services with a mission to bring enterprise-grade business practices to India's growing MSME sector. Prabandh is the flagship product of that vision.</p>
+            <p class="about-founder-bio">With <strong>17+ years of global supply chain and operations leadership</strong>, Ankush Manhotra is a rare combination of deep industry practitioner and technology builder. His career spans engagements across <strong>the US, Canada, Germany, and the Netherlands</strong> — solving some of the most complex supply chain challenges for multinational enterprises.</p>
+            <p class="about-founder-bio">Ankush has led transformations across both <strong>discrete and process manufacturing</strong>, serving marquee clients in <strong>CPG, Retail, Energy, Pharma, and Life Sciences</strong> — industries where supply chain precision is non-negotiable. He has personally managed programmes with an <strong>annual budget exceeding $25 million</strong>, bringing enterprise-grade rigour, accountability, and results to every engagement.</p>
+            <p class="about-founder-bio">Prabandh is the product of that experience — built not by software developers guessing at business problems, but by someone who has lived them at the highest level. Every feature in Prabandh reflects a real challenge Ankush has seen Indian businesses struggle with, solved using practices proven on a global stage.</p>
           </div>
         </div>
       </div>
