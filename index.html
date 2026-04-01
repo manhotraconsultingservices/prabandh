@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prabandh ERP — One Platform. Complete Control. Infinite Growth.</title>
 <meta name="description" content="Prabandh is India's most comprehensive cloud ERP — GST-native, multi-godown, role-based, built for SMEs. Manage Sales, Purchase, Inventory, HR, Accounting & Compliance from one powerful platform.">
-<meta name="keywords" content="ERP software India, cloud ERP for SME, GST-native ERP, inventory management software, accounting software India, HR payroll software, sales management ERP, purchase management software, ERP for small business, ERP for medium business, business management software India, Prabandh ERP, online ERP software, manufacturing ERP India, multi-godown inventory, cloud business software">
+<meta name="keywords" content="best ERP software for MSME India, affordable ERP for small business India, cloud ERP with GST billing India, ERP software under 5000 per month India, GST billing software with inventory India, ERP for trading company India, ERP for manufacturing SME India, how to manage GST compliance for MSME, inventory management software for godown, multi-godown stock management software India, replace Excel with ERP India, digital transformation for MSME India, automated GST filing software India, payroll software for small business India, cloud ERP software for Indian trading company, ERP with GSTR-1 GSTR-3B auto generation, ERP software with WhatsApp notifications India, ERP with delivery challan generation India, HR payroll software with attendance India, manufacturing ERP for SME India, ERP software no implementation cost India, simple ERP for MSME India, easy to use ERP India, ERP without IT team India, Prabandh ERP, GST-native ERP India, multi-godown inventory management, cloud business software India">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="Prabandh ERP">
 <link rel="canonical" href="https://www.prabandh.in/">
@@ -210,6 +210,47 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,.96);backdrop-fil
 .comp-check{color:#4ade80;font-weight:700;text-align:center}
 .comp-cross{color:#f87171;text-align:center}
 .comp-partial{color:var(--gold);text-align:center}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:32px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:16px}
+.testi-stars{color:#f59e0b;font-size:1.1rem;letter-spacing:2px}
+.testi-text{font-size:.95rem;color:var(--gray-600);line-height:1.75;flex:1;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:14px;margin-top:8px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:.9rem;flex-shrink:0}
+.testi-name{font-weight:700;color:var(--navy);font-size:.9rem}
+.testi-role{font-size:.78rem;color:var(--gray-400)}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr}}
+
+/* ── ONBOARDING JOURNEY ── */
+.journey-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:48px}
+.journey-steps::before{content:'';position:absolute;top:36px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--indigo),#7c3aed);z-index:0}
+.journey-step{text-align:center;position:relative;z-index:1;padding:0 16px}
+.journey-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),#7c3aed);color:#fff;font-size:1.4rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(79,70,229,.35)}
+.journey-step h4{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.journey-step p{font-size:.85rem;color:var(--gray-600);line-height:1.6}
+.journey-step .journey-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:10px}
+@media(max-width:768px){.journey-steps{grid-template-columns:1fr 1fr;gap:32px}.journey-steps::before{display:none}}
+
+/* ── INTEGRATIONS ── */
+.integrations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.integration-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r);padding:28px 24px;display:flex;align-items:flex-start;gap:16px;box-shadow:var(--sh);transition:var(--tr)}
+.integration-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.integration-icon{font-size:2rem;flex-shrink:0;width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.integration-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.integration-card p{font-size:.82rem;color:var(--gray-600);line-height:1.5}
+.integration-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px;margin-top:6px}
+.badge-live{background:#f0fdf4;color:#16a34a}
+.badge-coming{background:#fef3c7;color:#d97706}
+@media(max-width:768px){.integrations-grid{grid-template-columns:1fr 1fr}}
+
+/* ── SECURITY ── */
+.security-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.security-card{text-align:center;padding:32px 20px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);box-shadow:var(--sh)}
+.security-icon{font-size:2.2rem;margin-bottom:16px}
+.security-card h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.security-card p{font-size:.82rem;color:var(--gray-600);line-height:1.5}
+@media(max-width:768px){.security-grid{grid-template-columns:1fr 1fr}}
 
 /* ── ABOUT US ── */
 .about-intro{text-align:center;margin-bottom:64px}
@@ -1217,43 +1258,172 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
 
 
 <!-- ══════════════ TESTIMONIALS ══════════════ -->
-<!--
-<section class="section">
+<section class="section section-alt" id="testimonials">
   <div class="container">
     <div class="text-center">
       <div class="tag tag-green">Customer Stories</div>
       <h2 class="section-title">Businesses That Transformed with Prabandh</h2>
-      <p class="section-sub">Real outcomes from real businesses — across trading, manufacturing, and professional services.</p>
+      <p class="section-sub">Real outcomes from real businesses across India — in their own words.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"We recovered ₹12 lakhs in the first month simply because we could finally see what was unpaid. For the first time in 15 years of business, I know exactly who owes me what, down to the last rupee. The receivables ageing report alone paid for three years of subscription in 30 days."</p>
+        <p class="testi-text">"As a contract manufacturer in the health supplement space, managing raw material procurement, batch production, and compliance was a constant struggle across spreadsheets. Prabandh brought everything under one roof — from purchase orders to finished goods dispatch. Our operational efficiency has improved dramatically and we now have full visibility into every stage of our manufacturing cycle."</p>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">SM</div>
-          <div><div class="testi-name">Sanjay Mehta</div><div class="testi-role">Owner, Sanjay Enterprises · Distribution &amp; Trading, Mumbai</div></div>
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">PN</div>
+          <div><div class="testi-name">Planet Nutrition | FB Nutrition</div><div class="testi-role">Health Supplements · Contract Manufacturing · New Delhi</div></div>
         </div>
       </div>
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"The GST demand notice was a ₹19 lakh wake-up call. After Prabandh, our GSTR-1 is generated in two hours, reconciles perfectly with our books, and our CA hasn't found a single mismatch in six months. The peace of mind alone is worth every rupee of the subscription."</p>
+        <p class="testi-text">"Distributing health supplements across multiple retail channels meant constantly juggling stock levels, party ledgers, and GST compliance. With Prabandh, our inventory is always accurate, our customer outstanding is visible in real time, and GSTR filing no longer takes days. It's the system we always needed but thought was only for large companies."</p>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">RK</div>
-          <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">Finance Director, Rajan Exports · Export Manufacturing, Surat</div></div>
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">AT</div>
+          <div><div class="testi-name">Abhi Trading</div><div class="testi-role">Health Supplement Distribution · Bhopal</div></div>
         </div>
       </div>
       <div class="testi-card fade-up">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Before Prabandh, we bought ₹18 lakhs of fabric we already owned — just in a different city. Now every godown is visible on one screen. Our purchase team checks consolidated stock before raising a single PO. We've cut unnecessary orders by 28% in the first quarter alone."</p>
+        <p class="testi-text">"We evaluated several platforms before choosing Prabandh. What stood out was that it was built by people who actually understand supply chain — not just software developers. The multi-godown support, delivery challan tracking, and role-based access meant our team was productive from day one. No lengthy implementation, no consultant fees — just results."</p>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#d97706,#b45309)">PS</div>
-          <div><div class="testi-name">Priya Sharma</div><div class="testi-role">Managing Director, Priya Textiles · Wholesale, Pune</div></div>
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#d97706,#b45309)">SM</div>
+          <div><div class="testi-name">MSME Contract Manufacturing Client</div><div class="testi-role">Pharma · Baddi, HP</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
--->
+<!-- ══════════════ ONBOARDING JOURNEY ══════════════ -->
+<section class="section section-alt" id="onboarding">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="tag">Getting Started</div>
+      <h2 class="section-title">Live in Days, Not Months</h2>
+      <p class="section-sub">Most businesses are fully operational on Prabandh within 2 business days. No IT team needed. No consultants. No big-bang go-live.</p>
+    </div>
+    <div class="journey-steps">
+      <div class="journey-step fade-up">
+        <div class="journey-num">1</div>
+        <div class="journey-tag">Days 1–2</div>
+        <h4>Discovery &amp; Scoping</h4>
+        <p>We map your business — modules, user roles, godown structure, GST registration, and existing tools. A detailed configuration checklist is prepared. No forms to fill.</p>
+      </div>
+      <div class="journey-step fade-up">
+        <div class="journey-num">2</div>
+        <div class="journey-tag">Days 3–6</div>
+        <h4>Data Migration</h4>
+        <p>Your party masters, item catalogue, opening stock, and account balances are migrated from Excel or your existing system. Data is validated and reconciled before go-live.</p>
+      </div>
+      <div class="journey-step fade-up">
+        <div class="journey-num">3</div>
+        <div class="journey-tag">Days 7–11</div>
+        <h4>Configuration &amp; Training</h4>
+        <p>Role-specific, hands-on training for every user — sales team, purchase, warehouse, accounts, and HR. Practice runs on real business scenarios before go-live.</p>
+      </div>
+      <div class="journey-step fade-up">
+        <div class="journey-num">4</div>
+        <div class="journey-tag">Days 12–14</div>
+        <h4>Go Live + Hypercare</h4>
+        <p>Full go-live with parallel run support. Dedicated hypercare for the first 30 days post go-live. No lock-in. Cancel anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INTEGRATIONS ══════════════ -->
+<section class="section" id="integrations">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="tag">Integrations</div>
+      <h2 class="section-title">Connected to the Tools You Already Use</h2>
+      <p class="section-sub">Prabandh works seamlessly with India's most-used platforms — no manual exports, no double entry.</p>
+    </div>
+    <div class="integrations-grid">
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#fef3c7">🏛️</div>
+        <div>
+          <h4>GST Portal &amp; IRP</h4>
+          <p>Auto-generate GSTR-1 and GSTR-3B. E-invoice generation via IRP portal built in — no third-party tool needed.</p>
+          <span class="integration-badge badge-live">✓ Live</span>
+        </div>
+      </div>
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#f0fdf4">💬</div>
+        <div>
+          <h4>WhatsApp, SMS &amp; Email</h4>
+          <p>27+ business event triggers delivered via WhatsApp, SMS, and Email. Invoice delivery, payment alerts, stock warnings — automated.</p>
+          <span class="integration-badge badge-live">✓ Live</span>
+        </div>
+      </div>
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#eff6ff">🛒</div>
+        <div>
+          <h4>Shopify &amp; Amazon</h4>
+          <p>Sync online orders directly into Prabandh. Inventory deducted automatically on every sale — no manual reconciliation.</p>
+          <span class="integration-badge badge-live">✓ Live</span>
+        </div>
+      </div>
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#fdf4ff">🏦</div>
+        <div>
+          <h4>Bank Reconciliation</h4>
+          <p>NEFT, RTGS, Cheque, and Cash payments logged against invoices. Multi-account real-time balance with statement export.</p>
+          <span class="integration-badge badge-live">✓ Live</span>
+        </div>
+      </div>
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#f0fdf4">📧</div>
+        <div>
+          <h4>Email (SMTP)</h4>
+          <p>Branded PDF invoices, delivery challans, and salary slips sent directly from Prabandh via your own email domain.</p>
+          <span class="integration-badge badge-live">✓ Live</span>
+        </div>
+      </div>
+      <div class="integration-card fade-up">
+        <div class="integration-icon" style="background:#fff7ed">💳</div>
+        <div>
+          <h4>Payment Gateway</h4>
+          <p>Razorpay and PayU integrations for seamless payment collection — payment links on invoices, auto-reconciled on receipt.</p>
+          <span class="integration-badge badge-coming">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SECURITY ══════════════ -->
+<section class="section section-alt" id="security">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="tag">Security &amp; Trust</div>
+      <h2 class="section-title">Your Data is Safe. Always.</h2>
+      <p class="section-sub">Enterprise-grade security built for Indian businesses — so you can focus on growth, not data protection.</p>
+    </div>
+    <div class="security-grid">
+      <div class="security-card fade-up">
+        <div class="security-icon">🇮🇳</div>
+        <h4>Hosted in India</h4>
+        <p>All your business data is stored on servers located within India — fully compliant with Indian data residency requirements.</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">🔒</div>
+        <h4>End-to-End Encryption</h4>
+        <p>All data is encrypted in transit via HTTPS/TLS and encrypted at rest. Your financial and HR data is protected at every layer.</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">💾</div>
+        <h4>Daily Automated Backups</h4>
+        <p>Your data is backed up automatically every day. Point-in-time recovery ensures nothing is ever permanently lost.</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">👤</div>
+        <h4>Role-Based Access Control</h4>
+        <p>10 configurable user roles ensure every employee sees only what they need to — protecting sensitive financial and HR data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ ABOUT US ══════════════ -->
 <section class="section" id="about">
   <div class="container">
@@ -1482,6 +1652,11 @@ footer{background:var(--navy);padding:64px 0 32px;color:rgba(255,255,255,.7)}
           <li><a href="mailto:products@manhotraconsulting.in">products@manhotraconsulting.in</a></li>
           <li><a href="#demo">Book a Demo</a></li>
         </ul>
+        <div style="margin-top:20px;font-size:.75rem;color:rgba(255,255,255,.35);line-height:1.8">
+          <div style="font-weight:600;color:rgba(255,255,255,.5);margin-bottom:4px">Manhotra Consulting</div>
+          <div>Sector 57, Gurgaon, India</div>
+          <div>GSTIN: 06AWNPM9735H1ZZ</div>
+        </div>
         <div style="margin-top:20px">
           <h4 style="margin-bottom:12px">Follow Us</h4>
           <div class="footer-social">
